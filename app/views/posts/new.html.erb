@@ -1,0 +1,8 @@
+<%= form_with model: @post do |form| %>
+    <%= form.label :title, 'Title:' %><br>
+    <%= form.text_field :title %><br>
+    <%= form.label :body, 'Content:' %><br>
+    <%= form.text_area :body, size: '70x5' %>
+    <%= form.hidden_field :user_id, value: @user.id %>
+    <%= form.submit 'Post' %>
+<% end %>
